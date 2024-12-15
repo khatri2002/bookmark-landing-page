@@ -1,0 +1,44 @@
+.container {
+  @apply relative mt-6 flex flex-col-reverse items-center justify-between pl-3 pr-3 sm:mt-10 sm:flex-row md:pl-20 md:pr-10 lg:pl-40 xl:gap-x-16;
+
+  .textContainer {
+    @apply space-y-7;
+
+    h1 {
+      @apply text-center text-3xl font-semibold sm:text-start md:text-5xl;
+    }
+
+    .desc {
+      @apply mx-auto block w-4/5 text-center text-sm leading-6 text-grayish-blue sm:w-auto sm:text-start sm:text-base sm:leading-normal md:text-lg;
+    }
+
+    .btnContainer {
+      @apply flex justify-center gap-x-5 sm:justify-start;
+
+      .btn {
+        @apply rounded px-3 py-2 text-sm shadow-md md:px-5 md:py-3 md:text-base;
+
+        &.chrome {
+          @apply bg-soft-blue text-white;
+        }
+
+        &.firefox {
+          @apply bg-grayish-blue/10 text-very-dark-blue;
+        }
+      }
+    }
+  }
+
+  img {
+    @apply z-10;
+    @media (width < 1280px) {
+      max-width: 55%;
+    }
+    @media (width < 1280px) {
+      max-width: 45%;
+    }
+    @media (width < 640px) {
+      max-width: 100%;
+    }
+  }
+}

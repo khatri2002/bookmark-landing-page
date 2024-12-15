@@ -1,0 +1,68 @@
+.container {
+  @apply flex items-center justify-between px-8 py-10 transition md:px-20 lg:px-40;
+
+  .itemsContainer {
+    @apply hidden items-center gap-x-9 sm:flex;
+
+    .item {
+      span,
+      .loginBtn {
+        @apply text-sm uppercase tracking-wider transition hover:text-soft-red;
+      }
+
+      span {
+        @apply cursor-pointer text-very-dark-blue;
+      }
+
+      .loginBtn {
+        @apply rounded border-2 border-transparent bg-soft-red px-7 py-2 text-white shadow-md hover:border-soft-red hover:bg-transparent;
+      }
+    }
+  }
+
+  .hamBtn {
+    @apply block sm:hidden;
+  }
+
+  &.hide {
+    @apply invisible opacity-0;
+  }
+}
+
+.mobileNavContainer {
+  @apply absolute bottom-0 left-full right-0 top-0 z-50 m-auto flex h-screen w-0 flex-col justify-between overflow-hidden bg-very-dark-blue p-0 opacity-95 transition-all duration-300;
+
+  .upper {
+    .header {
+      @apply flex items-center justify-between;
+      .logo {
+        filter: invert(1) brightness(100);
+      }
+    }
+
+    .itemsContainer {
+      @apply mt-10;
+
+      .item {
+        @apply border-t border-grayish-blue/30 py-6 text-center;
+
+        span,
+        .btn {
+          @apply text-2xl uppercase tracking-wider text-white;
+        }
+
+        .btn {
+          @apply w-full rounded border-2 py-2;
+        }
+      }
+    }
+  }
+
+  .lower {
+    @apply flex justify-center gap-x-9;
+  }
+
+  &.show {
+    @apply left-0 w-screen px-8 py-10;
+  }
+}
