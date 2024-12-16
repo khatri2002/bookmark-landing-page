@@ -7,6 +7,9 @@ import IllustrationHero from "./illustration-hero.svg";
 import IllustrationFeaturesTab1 from "./illustration-features-tab-1.svg";
 import IllustrationFeaturesTab2 from "./illustration-features-tab-2.svg";
 import IllustrationFeaturesTab3 from "./illustration-features-tab-3.svg";
+import LogoChrome from "./logo-chrome.svg";
+import LogoOpera from "./logo-opera.svg";
+import LogoFirefox from "./logo-firefox.svg";
 
 export {
   IconHamburger,
@@ -18,4 +21,7 @@ export {
   IllustrationFeaturesTab1,
   IllustrationFeaturesTab2,
   IllustrationFeaturesTab3,
+  LogoChrome,
+  LogoOpera,
+  LogoFirefox,
 };

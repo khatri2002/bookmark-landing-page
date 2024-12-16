@@ -1,0 +1,43 @@
+.container {
+  @apply my-32 sm:my-56;
+
+  .heroTitle {
+    @apply text-center;
+  }
+
+  .heroDesc {
+    @apply mx-auto mt-5 block w-4/5 text-center sm:w-2/5;
+  }
+
+  .boxContainer {
+    @apply mx-auto mt-10 flex flex-col items-center justify-center gap-5 px-4 sm:flex-row sm:items-start lg:gap-x-9 lg:px-0;
+
+    .box {
+      @apply flex w-4/5 flex-col items-center rounded-lg py-5 shadow-lg sm:w-auto;
+
+      .title {
+        @apply mt-7 text-lg font-medium;
+      }
+
+      .desc {
+        @apply mt-2 text-sm text-grayish-blue;
+      }
+
+      .border_ {
+        @apply mt-5 w-full border-t-4 border-dotted sm:mt-8;
+      }
+
+      .btn {
+        @apply mx-5 mt-5 rounded border-2 border-transparent bg-soft-blue px-2 py-3 text-sm text-white shadow-md transition hover:border-soft-blue hover:bg-white hover:text-soft-blue lg:mx-8 lg:px-5;
+      }
+
+      &:nth-child(2) {
+        @apply sm:mt-10;
+      }
+
+      &:nth-child(3) {
+        @apply sm:mt-20;
+      }
+    }
+  }
+}
