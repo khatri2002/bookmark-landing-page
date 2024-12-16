@@ -1,0 +1,88 @@
+.container {
+  @apply mt-28 sm:mt-12;
+
+  .heroTitle {
+    @apply text-center;
+  }
+
+  .heroDesc {
+    @apply mx-auto mt-6 block text-center;
+    width: 37%;
+    @media (width < 1024px) {
+      width: 60%;
+    }
+    @media (width < 640px) {
+      width: 90%;
+    }
+  }
+
+  .navContainer {
+    @apply flex items-center justify-center;
+
+    .navItems {
+      @apply my-10 flex w-full flex-col text-center sm:w-auto sm:flex-row lg:my-14;
+
+      .item {
+        @apply relative cursor-pointer border-b px-5 py-4 text-base text-gray-500 transition hover:text-soft-red lg:px-9 lg:py-5 lg:text-lg;
+
+        &:before {
+          content: "";
+          @apply invisible absolute bottom-0 left-0 right-0 mx-auto h-1 w-32 bg-soft-red opacity-0 transition duration-200;
+        }
+
+        &.active {
+          @apply text-gray-700 sm:border-b-4 sm:border-b-soft-red;
+
+          &:before {
+            @apply visible opacity-100 sm:invisible sm:opacity-0;
+          }
+        }
+
+        &:first-child {
+          @apply border-t sm:border-t-0;
+        }
+      }
+    }
+  }
+
+  .contentContainer {
+    @apply relative flex flex-col items-center gap-x-16 gap-y-10 px-12 sm:flex-row md:px-28 lg:mt-2 lg:gap-x-28 lg:px-36 xl:items-start xl:px-44;
+
+    .image {
+      @apply z-10 w-full sm:w-1/2;
+
+      img {
+        @apply m-auto h-52 object-contain sm:h-auto;
+      }
+    }
+
+    .text {
+      @apply w-full space-y-6 sm:w-1/2;
+
+      .title {
+        @apply mt-6 text-center sm:text-start lg:mt-9;
+      }
+
+      .desc {
+        @apply block text-center sm:text-start;
+      }
+
+      .btn {
+        @apply hidden rounded border-2 border-transparent bg-soft-blue px-4 py-2 text-sm text-white shadow-md transition hover:border-soft-blue hover:bg-white hover:text-soft-blue sm:block md:px-6 md:py-3;
+      }
+    }
+
+    &:before {
+      content: "";
+      @apply absolute left-0 top-8 bg-soft-blue sm:top-32 md:top-28 lg:top-20;
+      border-bottom-right-radius: 7.5rem;
+      border-top-right-radius: 8rem;
+      height: 22vw;
+      width: 38%;
+      @media (width < 640px) {
+        width: 75%;
+        height: 13rem;
+      }
+    }
+  }
+}
