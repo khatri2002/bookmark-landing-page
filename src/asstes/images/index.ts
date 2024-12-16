@@ -10,6 +10,7 @@ import IllustrationFeaturesTab3 from "./illustration-features-tab-3.svg";
 import LogoChrome from "./logo-chrome.svg";
 import LogoOpera from "./logo-opera.svg";
 import LogoFirefox from "./logo-firefox.svg";
+import IconArrow from "./icon-arrow.svg";
 
 export {
   IconHamburger,
@@ -24,4 +25,5 @@ export {
   LogoChrome,
   LogoOpera,
   LogoFirefox,
+  IconArrow,
 };
