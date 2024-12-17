@@ -1,0 +1,32 @@
+.container {
+  @apply flex flex-col items-center justify-between gap-x-12 gap-y-10 bg-very-dark-blue px-24 py-7 text-xs uppercase tracking-widest text-white md:flex-row lg:px-40;
+
+  .navContainer {
+    @apply flex flex-col items-center gap-x-12 gap-y-5 md:flex-row;
+
+    .item {
+      @apply cursor-pointer;
+
+      img {
+        @apply w-11/12 md:w-auto;
+        filter: invert(1) brightness(100);
+      }
+
+      span {
+        @apply opacity-85 transition hover:text-soft-red;
+      }
+    }
+  }
+
+  .socialsContainer {
+    @apply flex items-center gap-x-8 md:gap-x-10;
+
+    .item {
+      @apply cursor-pointer;
+    }
+
+    img {
+      @apply w-11/12 md:w-auto;
+    }
+  }
+}
