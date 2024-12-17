@@ -1,0 +1,57 @@
+.container {
+  @apply flex flex-col items-center gap-y-7 bg-soft-blue px-4 py-16 text-white;
+
+  .desc {
+    @apply text-xs uppercase sm:text-sm;
+    letter-spacing: 6px;
+  }
+
+  .title {
+    @apply w-auto text-center text-xl font-medium sm:w-96 sm:text-2xl md:text-3xl;
+  }
+
+  .form {
+    @apply flex w-full flex-col items-start gap-x-4 gap-y-2 sm:w-auto sm:flex-row;
+
+    .inputWrapper {
+      @apply w-full rounded transition sm:w-72 sm:rounded-md;
+      padding: 2px;
+
+      .input {
+        @apply flex w-full items-center rounded border bg-white shadow focus-within:border-soft-red sm:rounded-md;
+
+        input {
+          @apply w-full rounded-md px-3 py-2 text-very-dark-blue outline-none md:px-5 md:py-3;
+        }
+
+        img {
+          @apply invisible w-0 bg-white opacity-0 transition-all;
+        }
+      }
+
+      .errorText {
+        @apply invisible block px-3 italic opacity-0 transition;
+        margin-top: 2px;
+        font-size: 0.7rem;
+      }
+
+      &.error {
+        @apply bg-soft-red;
+
+        .input {
+          img {
+            @apply visible w-auto pr-3 opacity-100 sm:pr-5;
+          }
+        }
+
+        .errorText {
+          @apply visible opacity-100;
+        }
+      }
+    }
+
+    button {
+      @apply w-full rounded border-2 border-transparent bg-soft-red px-3 py-2 text-sm shadow transition hover:border-soft-red hover:bg-white hover:text-soft-red sm:w-auto sm:rounded-md sm:text-base md:px-5 md:py-3;
+    }
+  }
+}

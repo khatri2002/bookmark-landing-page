@@ -11,6 +11,7 @@ import LogoChrome from "./logo-chrome.svg";
 import LogoOpera from "./logo-opera.svg";
 import LogoFirefox from "./logo-firefox.svg";
 import IconArrow from "./icon-arrow.svg";
+import IconError from "./icon-error.svg";
 
 export {
   IconHamburger,
@@ -26,4 +27,5 @@ export {
   LogoOpera,
   LogoFirefox,
   IconArrow,
+  IconError,
 };

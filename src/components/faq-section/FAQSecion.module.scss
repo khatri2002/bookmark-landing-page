@@ -53,6 +53,6 @@
   }
 
   .btn {
-    @apply rounded border-2 border-transparent bg-soft-blue px-5 py-2 text-sm text-white transition hover:border-soft-blue hover:bg-white hover:text-soft-blue;
+    @apply rounded border-2 border-transparent bg-soft-blue px-5 py-2 text-sm text-white shadow-md transition hover:border-soft-blue hover:bg-white hover:text-soft-blue;
   }
 }
