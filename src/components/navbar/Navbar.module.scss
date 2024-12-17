@@ -1,5 +1,5 @@
 .container {
-  @apply flex items-center justify-between px-8 py-10 transition md:px-20 lg:px-40;
+  @apply sticky -top-full z-50 flex items-center justify-between bg-white px-8 py-7 transition-all duration-500 md:px-20 lg:px-40;
 
   .itemsContainer {
     @apply hidden items-center gap-x-9 sm:flex;
@@ -27,10 +27,14 @@
   &.hide {
     @apply invisible opacity-0;
   }
+
+  &.appear {
+    @apply top-0;
+  }
 }
 
 .mobileNavContainer {
-  @apply absolute bottom-0 left-full right-0 top-0 z-50 m-auto flex h-screen w-0 flex-col justify-between overflow-hidden bg-very-dark-blue p-0 opacity-95 transition-all duration-300;
+  @apply fixed bottom-0 left-full right-0 top-0 z-50 m-auto flex h-screen w-0 flex-col justify-between overflow-hidden bg-very-dark-blue p-0 opacity-95 transition-all duration-300;
 
   .upper {
     .header {

@@ -2,7 +2,7 @@
   @apply relative mt-6 flex flex-col-reverse items-center justify-between pl-3 pr-3 sm:mt-10 sm:flex-row md:pl-20 md:pr-10 lg:pl-40 xl:gap-x-16;
 
   .textContainer {
-    @apply space-y-7;
+    @apply mt-5 space-y-7 sm:mt-0 sm:w-1/2;
 
     h1 {
       @apply text-center text-3xl font-semibold sm:text-start md:text-5xl;
@@ -16,21 +16,22 @@
       @apply flex justify-center gap-x-5 sm:justify-start;
 
       .btn {
-        @apply rounded px-3 py-2 text-sm shadow-md md:px-5 md:py-3 md:text-base;
+        @apply rounded border-2 border-transparent px-3 py-2 text-sm shadow-md transition md:px-5 md:py-3 md:text-base;
 
         &.chrome {
-          @apply bg-soft-blue text-white;
+          @apply bg-soft-blue text-white hover:border-soft-blue hover:bg-white hover:text-soft-blue;
         }
 
         &.firefox {
-          @apply bg-grayish-blue/10 text-very-dark-blue;
+          @apply bg-grayish-blue/10 text-very-dark-blue hover:border-very-dark-blue hover:bg-white;
         }
       }
     }
   }
 
   img {
-    @apply z-10;
+    @apply z-10 sm:w-1/2;
+
     @media (width < 1280px) {
       max-width: 55%;
     }
@@ -39,6 +40,25 @@
     }
     @media (width < 640px) {
       max-width: 100%;
+    }
+  }
+
+  &::before {
+    content: "";
+    @apply absolute right-0 bg-soft-blue;
+    height: 23rem;
+    top: 8vw;
+    width: max(20rem, 32vw);
+    border-bottom-left-radius: 13rem;
+    @media (width < 1280px) {
+      height: 14rem;
+    }
+    @media (width < 1024px) {
+      top: 9rem;
+      height: 10rem;
+    }
+    @media (width < 768px) {
+      top: 5rem;
     }
   }
 }

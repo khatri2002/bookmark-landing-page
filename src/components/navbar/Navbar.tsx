@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import classNames from "classnames";
 
@@ -13,6 +13,33 @@ import {
 
 const Navbar = () => {
   const [showMobileNav, setShowMobileNav] = useState(false);
+  const [appear, setAppear] = useState(false);
+
+  useEffect(() => {
+    // make navbar appears after certain scroll
+
+    const handleScroll = () => {
+      if (window.scrollY > 600 && !appear) setAppear(true);
+      if (window.scrollY < 10 && appear) setAppear(false);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [appear]);
+
+  useEffect(() => {
+    // prevent scroll on mobile when navbar is active
+
+    if (showMobileNav) document.body.style.overflow = "hidden";
+    else document.body.style.overflow = "auto";
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [showMobileNav]);
 
   return (
     <>
@@ -20,6 +47,7 @@ const Navbar = () => {
         className={classNames({
           [styles.container]: true,
           [styles.hide]: showMobileNav,
+          [styles.appear]: appear,
         })}
       >
         <img src={LogoBookMark} alt="logo-bookmark" />
