@@ -3,7 +3,7 @@ import styles from "./FooterSection.module.scss";
 
 const FooterSection = () => {
   return (
-    <div className={styles.container}>
+    <footer className={styles.container}>
       <ul className={styles.navContainer}>
         <li className={styles.item}>
           <img src={LogoBookMark} alt="logo-bookmark" />
@@ -26,7 +26,7 @@ const FooterSection = () => {
           <img src={IconTwitter} alt="icon-twitter" />
         </li>
       </ul>
-    </div>
+    </footer>
   );
 };
 

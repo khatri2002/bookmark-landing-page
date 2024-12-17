@@ -43,7 +43,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div
+      <nav
         className={classNames({
           [styles.container]: true,
           [styles.hide]: showMobileNav,
@@ -71,7 +71,7 @@ const Navbar = () => {
         >
           <img src={IconHamburger} alt="icon-hamburger" />
         </button>
-      </div>
+      </nav>
       <div
         className={classNames({
           [styles.mobileNavContainer]: true,

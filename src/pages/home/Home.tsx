@@ -8,7 +8,7 @@ import Navbar from "../../components/navbar/Navbar";
 
 const Home = () => {
   return (
-    <>
+    <main>
       <Navbar />
       <LandingSection />
       <FeaturesSection />
@@ -16,7 +16,7 @@ const Home = () => {
       <FAQSecion />
       <FormSection />
       <FooterSection />
-    </>
+    </main>
   );
 };
 
